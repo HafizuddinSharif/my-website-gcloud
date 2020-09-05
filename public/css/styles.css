@@ -6060,6 +6060,10 @@ video {
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+.font-permanent-marker {
+  font-family: 'Permanent Marker', cursive;
+}
+
 .font-hairline {
   font-weight: 100;
 }

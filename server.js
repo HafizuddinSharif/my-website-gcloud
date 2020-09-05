@@ -29,21 +29,43 @@ app.use(express.static(__dirname + "/public"))
 app.use("/public", express.static('public'))
 
 app.get('/', function(req, res) {
-  res.render('main-page')
-})
-
-app.get('/portfolio', function(req, res) {
   res.render('portfolio')
 })
 
-app.get('/blog', function(req, res) {
+app.get('/linktree', function(req, res) {
 
-  let obj = {
-    posts: posts
+  title = [
+    'Portfolio',
+    'Youtube',
+    'Curiouscat',
+    'Github',
+    'Linkedin',
+    'Twitter'
+  ]
+
+  link = [
+    '/',
+    'https://www.youtube.com/channel/UCAbwe9Gd8TD5lO_RvhT6ZgQ',
+    'https://curiouscat.qa/sharifffkun',
+    'https://github.com/HafizuddinSharif',
+    'https://www.linkedin.com/in/hafizuddin-sharif-umar-sharif-606567160/',
+    'https://twitter.com/sharifffkun'
+  ]
+
+  obj = {
+    title: title,
+    link: link
   }
 
-  res.render('blog', obj)
+  res.render('main-page', obj)
 })
+
+// fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@hafizuddinsharif')
+//     .then((res) => res.json())
+//     .then((data) => {
+//       posts = data.items
+//     }
+//   )
 
 app.listen(8080, function () {
   console.log('Listening on port 8080')

@@ -8,13 +8,22 @@
   </head>
   <body class="bg-gray-100 mt-10">
 
+
+
     <div class="grid grid-cols-1 mx-64 text-center gap-6">
+      <h1 class="text-4xl">I wrote some stuff</h1>
+
+      <% let index = 1 %>
       <% posts.forEach( function(row) { %>
 
         <a class="" href="<%= row.link %>">
-          <div class="py-5 bg-gray-300 rounded-lg shadow-lg"><%= row.title %></div>
+          <div class="flex grid grid-cols-6 py-5 bg-gray-300 rounded-lg shadow-lg justify-center">
+            <span class="col-span-1 text-2xl"><%= index %></span>
+            <span class="col-span-5 text-left my-auto"><%= row.title %></span>
+          </div>
         </a>
 
+      <% index++ %>
       <% }) %>
     </div>
 

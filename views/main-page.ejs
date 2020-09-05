@@ -5,38 +5,25 @@
     <meta charset="utf-8">
     <title>Main Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="public/css/styles.css">
   </head>
 
-  <body class="bg-gray-100 mt-10">
+  <body class="bg-gray-200">
 
-    <div class="grid grid-cols-4 mx-64 text-center gap-6">
+    <p class="font-permanent-marker text-center text-3xl my-10">Links to my socials</p>
 
-      <a class="col-start-2 col-span-2" href="/portfolio">
-        <div class="py-5 bg-gray-300 rounded-lg shadow-lg">Portfolio</div>
-      </a>
+    <div class="grid grid-cols-4 text-center gap-6 mx-5 lg:mx-32">
 
-      <a class="col-start-2 col-span-2" href="https://www.youtube.com/channel/UCAbwe9Gd8TD5lO_RvhT6ZgQ">
-        <div class="py-5 bg-gray-300 rounded-lg shadow-lg">Youtube</div>
-      </a>
-
-      <a class="col-start-2 col-span-2" href="https://curiouscat.qa/sharifffkun">
-        <div class="py-5 bg-gray-300 rounded-lg shadow-lg">Curiouscat</div>
-      </a>
-
-      <a class="col-start-2 col-span-2" href="https://github.com/HafizuddinSharif">
-        <div class="py-5 bg-gray-300 rounded-lg shadow-lg">Github</div>
-      </a>
-
-      <a class="col-start-2 col-span-2" href="https://www.linkedin.com/in/hafizuddin-sharif-umar-sharif-606567160/">
-        <div class="py-5 bg-gray-300 rounded-lg shadow-lg">Linkedin</div>
-      </a>
-
-      <a class="col-start-2 col-span-2" href="https://twitter.com/sharifffkun">
-        <div class="py-5 bg-gray-300 rounded-lg shadow-lg">Twitter</div>
-      </a>
+      <% for (var i = 0; i < title.length; i++) { %>
+        <a class="col-span-2" href="<%= link[i] %>">
+          <div class="py-5 bg-gray-300 rounded-lg shadow-lg hover:bg-gray-700 hover:text-white transition duration-500"><%= title[i] %></div>
+        </a>
+      <% } %>
 
     </div>
+
+    <footer class="my-10 text-sm font-permanent-marker text-center">@ Hafizuddin Sharif 2020</footer>
 
   </body>
 
